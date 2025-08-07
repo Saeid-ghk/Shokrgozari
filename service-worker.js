@@ -1,14 +1,18 @@
-self.addEventListener("install", event => {
+const CACHE_NAME = 'gratitude-cache-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/style.css',
+  '/script.js',
+  '/manifest.json',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png'
+];
+
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open("gratitude-cache").then(cache => {
-      return cache.addAll([
-        "index.html",
-        "style.css",
-        "script.js",
-        "manifest.json",
-        "icon-192.png",
-        "icon-512.png"
-      ]);
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(urlsToCache);
     })
   );
 });
