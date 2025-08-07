@@ -1,0 +1,161 @@
+/* فونت فارسی */
+@font-face {
+  font-family: 'Vazir';
+  src: url('fonts/Vazir.woff2') format('woff2'),
+       url('fonts/Vazir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* فونت و تنظیمات پایه */
+body {
+  font-family: 'Vazir', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+button {
+    font-family: 'Vazir', sans-serif;
+}
+/* حالت تاریک */
+body.dark {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: #eee;
+}
+
+/* تیترها */
+h1, h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* متن‌ها */
+p {
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  text-align: justify;
+  margin: 0.5rem 0;
+}
+.container {
+    margin-top: 3rem;
+}
+
+.date-label {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* طراحی شیشه‌ای برای دکمه‌ها */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.actions button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+body.dark .actions button {
+  background: rgba(50, 50, 50, 0.3);
+  color: #eee;
+}
+
+body.dark .actions button:hover {
+  background: rgba(80, 80, 80, 0.5);
+}
+
+/* دکمه بازگشت */
+button#back {
+  display: block;
+  margin: 2rem auto;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.2rem;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+body.dark button#back {
+  background: rgba(60, 60, 60, 0.3);
+  color: #eee;
+}
+
+/* لیست تمرین‌ها با افکت شیشه‌ای */
+.scrollable {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body.dark .scrollable {
+  background: rgba(40, 40, 40, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* مخفی‌سازی بخش‌ها */
+.hidden {
+  display: none;
+}
+.exercise-item {
+    margin-bottom: 1rem;;
+}
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scrollable {
+    max-height: 50vh;
+  }
+}

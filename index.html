@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شکرگزاری ۲۸ روزه</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- استایل اصلی -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- رنگ مرورگر موبایل -->
+  <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+  <!-- صفحه تمرین روز جاری -->
+  <main class="container" id="main-view">
+    <header>
+      <h2 id="day-title" aria-live="polite">در حال بارگذاری...</h2>
+      <p id="day-content">...</p>
+      <p id="date" class="date-label">...</p>
+    </header>
+
+    <nav class="actions">
+      <button id="show-all" aria-label="نمایش همه تمرین‌ها">
+        📋<span>نمایش همه روزها</span>
+      </button>
+      <button id="reset" aria-label="شروع دوباره تمرین‌ها">
+        🔄<span>شروع دوباره</span>
+      </button>
+      <button id="toggle-theme" aria-label="تغییر حالت روشن/تاریک">
+        🌓<span>حالت تاریک</span>
+      </button>
+    </nav>
+  </main>
+
+  <!-- صفحه لیست کامل تمرین‌ها -->
+  <section id="all-days" class="hidden">
+    <h3>📅 لیست کامل تمرین‌های ۲۸ روزه</h3>
+    <div id="days-list" class="scrollable"></div>
+    <button id="back" aria-label="بازگشت به تمرین روز جاری">🔙 بازگشت</button>
+  </section>
+
+  <!-- اسکریپت‌ها -->
+  <script src="script.js"></script>
+</body>
+</html>
